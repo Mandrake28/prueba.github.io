@@ -28,20 +28,27 @@
 
 
 .side {
-   background:#eee;
-   height:550px;
-   width:400px;
-/*    border:1px solid red; */
-   padding:10px;
+    background: #eee;
+    height: auto; /* Que la altura se ajuste al contenido */
+    width: 100%; /* Ocupa todo el ancho disponible en la tarjeta */
+    max-width: 400px; /* Evita que crezca demasiado si hay espacio */
+    padding: 10px;
+    /* Eliminar o ajustar la transformación, ya que distorsionará el layout en móvil */
+    /* transform: skew(10deg, 20deg); (Eliminar en móvil) */
 }
+
 .side.one {
-   width:320px;
-   transform:skew(10deg,20deg);
-   background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
+    width: 100%; /* Ocupa todo el ancho disponible en la tarjeta */
+    /* Eliminar la transformación por defecto o ajustarla con Media Query */
+    /* transform: skew(10deg, 20deg); */
+    background: linear-gradient(90deg, #fff, #fff 40%, #ddd);
 }
+
 .side.two {
-   transform:skew(10deg,-15deg);
-   background:linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
+    width: 100%; /* Ocupa todo el ancho disponible en la tarjeta */
+    /* Eliminar la transformación por defecto o ajustarla con Media Query */
+    /* transform: skew(10deg, -15deg); */
+    background: linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
 }
 
 body {
