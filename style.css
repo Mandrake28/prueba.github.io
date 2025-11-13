@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
 
 #card {
-   height:500px;
-   width:800px;
-   margin:5em auto;
-   position: fixed;
-  top: -15px;
-   left: 25%;
-   display:flex;
-   visibility:hidden;
+    /* Eliminamos fixed, top, y left para que se centre con margin y sea adaptable */
+    height: auto; /* Que la altura se ajuste al contenido */
+    width: 90%; /* 90% del ancho disponible */
+    max-width: 800px; /* Evita que crezca demasiado en pantallas grandes */
+    margin: 5em auto;
+    position: relative; /* Omitir si no se necesita posicionar elementos internos con 'absolute' */
+    display: flex;
+    visibility: hidden;
+    /* Recomendación: Añadir 'flex-wrap' para que los lados se apilen en móvil */
+    flex-wrap: wrap; 
+    justify-content: center; /* Centra los lados */
 }
 #card h2 {
    font-size:3em;
